@@ -20,10 +20,9 @@ export function CtaSection() {
       if (contentRef.current) {
         gsap.fromTo(
           contentRef.current,
-          { y: 30, opacity: 0 },
+          { y: 30 },
           {
             y: 0,
-            opacity: 1,
             duration: 0.7,
             ease: "power3.out",
             scrollTrigger: {
@@ -38,7 +37,6 @@ export function CtaSection() {
       if (footerRef.current) {
         gsap.from(footerRef.current, {
           y: 20,
-          opacity: 0,
           duration: 0.5,
           ease: "power3.out",
           scrollTrigger: {
