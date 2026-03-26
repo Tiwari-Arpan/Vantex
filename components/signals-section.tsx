@@ -83,10 +83,9 @@ export function SignalsSection() {
       // Header slide in from left
       gsap.fromTo(
         headerRef.current,
-        { x: -60, opacity: 0 },
+        { x: -60 },
         {
           x: 0,
-          opacity: 1,
           duration: 1,
           ease: "power3.out",
           scrollTrigger: {
@@ -101,10 +100,9 @@ export function SignalsSection() {
       if (cards) {
         gsap.fromTo(
           cards,
-          { x: -100, opacity: 0 },
+          { x: -100 },
           {
             x: 0,
-            opacity: 1,
             duration: 0.8,
             stagger: 0.2,
             ease: "power3.out",

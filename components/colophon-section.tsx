@@ -20,7 +20,6 @@ export function ColophonSection() {
       if (headerRef.current) {
         gsap.from(headerRef.current, {
           x: -60,
-          opacity: 0,
           duration: 1,
           ease: "power3.out",
           scrollTrigger: {
@@ -36,7 +35,6 @@ export function ColophonSection() {
         const columns = gridRef.current.querySelectorAll(":scope > div")
         gsap.from(columns, {
           y: 40,
-          opacity: 0,
           duration: 0.8,
           stagger: 0.1,
           ease: "power3.out",
@@ -52,7 +50,6 @@ export function ColophonSection() {
       if (footerRef.current) {
         gsap.from(footerRef.current, {
           y: 20,
-          opacity: 0,
           duration: 0.8,
           ease: "power3.out",
           scrollTrigger: {

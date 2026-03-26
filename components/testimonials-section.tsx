@@ -39,10 +39,9 @@ export function TestimonialsSection() {
       if (headerRef.current) {
         gsap.fromTo(
           headerRef.current,
-          { x: -40, opacity: 0 },
+          { x: -40 },
           {
             x: 0,
-            opacity: 1,
             duration: 0.6,
             ease: "power3.out",
             scrollTrigger: {
@@ -58,10 +57,9 @@ export function TestimonialsSection() {
         const cards = cardsRef.current.querySelectorAll("article")
         gsap.fromTo(
           cards,
-          { y: 30, opacity: 0 },
+          { y: 30 },
           {
             y: 0,
-            opacity: 1,
             duration: 0.6,
             stagger: 0.1,
             ease: "power3.out",

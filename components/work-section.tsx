@@ -58,10 +58,9 @@ export function WorkSection() {
       // Header slide in from left
       gsap.fromTo(
         headerRef.current,
-        { x: -60, opacity: 0 },
+        { x: -60 },
         {
           x: 0,
-          opacity: 1,
           duration: 1,
           ease: "power3.out",
           scrollTrigger: {
@@ -74,10 +73,9 @@ export function WorkSection() {
 
       const cards = gridRef.current?.querySelectorAll("article")
       if (cards && cards.length > 0) {
-        gsap.set(cards, { y: 60, opacity: 0 })
+        gsap.set(cards, { y: 60 })
         gsap.to(cards, {
           y: 0,
-          opacity: 1,
           duration: 0.8,
           stagger: 0.1,
           ease: "power3.out",

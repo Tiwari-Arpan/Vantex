@@ -66,7 +66,6 @@ export function FeaturesSection() {
     const ctx = gsap.context(() => {
       gsap.from(headerRef.current, {
         x: -40,
-        opacity: 0,
         duration: 0.6,
         ease: "power3.out",
         scrollTrigger: {
@@ -81,7 +80,6 @@ export function FeaturesSection() {
         const isRight = features[index].align === "right"
         gsap.from(article, {
           x: isRight ? 50 : -50,
-          opacity: 0,
           duration: 0.7,
           ease: "power3.out",
           scrollTrigger: {

@@ -21,10 +21,9 @@ export function ShowcaseSection() {
       if (headerRef.current) {
         gsap.fromTo(
           headerRef.current,
-          { x: -40, opacity: 0 },
+          { x: -40 },
           {
             x: 0,
-            opacity: 1,
             duration: 0.6,
             ease: "power3.out",
             scrollTrigger: {
@@ -39,10 +38,9 @@ export function ShowcaseSection() {
       if (cardRef.current) {
         gsap.fromTo(
           cardRef.current,
-          { y: 30, opacity: 0 },
+          { y: 30 },
           {
             y: 0,
-            opacity: 1,
             duration: 0.7,
             ease: "power3.out",
             scrollTrigger: {

@@ -58,7 +58,6 @@ export function PrinciplesSection() {
       // Header slide in
       gsap.from(headerRef.current, {
         x: -60,
-        opacity: 0,
         duration: 1,
         ease: "power3.out",
         scrollTrigger: {
@@ -74,7 +73,6 @@ export function PrinciplesSection() {
         const isRight = principles[index].align === "right"
         gsap.from(article, {
           x: isRight ? 80 : -80,
-          opacity: 0,
           duration: 1,
           ease: "power3.out",
           scrollTrigger: {

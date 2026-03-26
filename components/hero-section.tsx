@@ -11,10 +11,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 gsap.registerPlugin(ScrollTrigger)
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
+const slideUp = {
+  hidden: { y: 24 },
   visible: (i: number) => ({
-    opacity: 1,
     y: 0,
     transition: {
       delay: i * 0.1,
@@ -34,7 +33,6 @@ export function HeroSection() {
     const ctx = gsap.context(() => {
       gsap.to(contentRef.current, {
         y: -80,
-        opacity: 0,
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
@@ -64,7 +62,7 @@ export function HeroSection() {
 
         <motion.h2
           custom={0}
-          variants={fadeUp}
+          variants={slideUp}
           initial="hidden"
           animate="visible"
           className="font-[var(--font-bebas)] text-foreground/90 text-[clamp(1.5rem,4vw,3rem)] mt-5 tracking-wide"
@@ -74,7 +72,7 @@ export function HeroSection() {
 
         <motion.p
           custom={1}
-          variants={fadeUp}
+          variants={slideUp}
           initial="hidden"
           animate="visible"
           className="mt-4 max-w-lg font-mono text-sm md:text-base text-muted-foreground leading-relaxed"
@@ -85,7 +83,7 @@ export function HeroSection() {
         {/* Trust indicators */}
         <motion.div
           custom={1.5}
-          variants={fadeUp}
+          variants={slideUp}
           initial="hidden"
           animate="visible"
           className="mt-6 flex flex-wrap items-center gap-6 font-mono text-xs uppercase tracking-widest text-foreground/70"
@@ -101,7 +99,7 @@ export function HeroSection() {
 
         <motion.div
           custom={2}
-          variants={fadeUp}
+          variants={slideUp}
           initial="hidden"
           animate="visible"
           className="mt-10 flex flex-wrap items-center gap-5"
@@ -125,7 +123,7 @@ export function HeroSection() {
       {/* Floating info tag */}
       <motion.div
         custom={3}
-        variants={fadeUp}
+        variants={slideUp}
         initial="hidden"
         animate="visible"
         className="absolute bottom-8 right-8 md:bottom-12 md:right-12"
